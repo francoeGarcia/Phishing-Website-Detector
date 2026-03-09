@@ -41,10 +41,6 @@ FEATURE_COLS = [
     "Statistical_report",
 ]
 
-@app.route('/')
-def home():
-    return render_template('index.html')
-
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.get_json(silent=True) or {}
